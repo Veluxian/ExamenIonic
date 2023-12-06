@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'restablecer',
+    loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
+  },
+  {
+    path: 'error',
+    loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
+  },
+  {
+    path: 'conductor',
+    loadChildren: () => import('./conductor/conductor.module').then( m => m.ConductorPageModule)
+  },
 ];
 
 @NgModule({
